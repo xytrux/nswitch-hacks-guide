@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>NSwitch Hacks Guide</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the NSwitch Hacks Guide</h1>
+  </header>
+  <main>
+    <section class="center-content">
+      <h2>Notes</h2>
+      <p>This guide is not for modchipped Switches.</p>
+      <h2>Introduction</h2>
+      <p>This guide will help you hack your Nintendo Switch.</p>
+      <h3>Requirements:</h3>
+      <ul>
+        <li>SD Card - (128GB+ Recommended)</li>
+        <li>Computer or Android device</li>
+        <li>Internet Connection</li>
+        <li>RCM jig</li>
+        <li>USB-C cable</li>
+      </ul>
+      <h3>Is Your Switch Patched?</h3>
+      <ol>
+        <li>Go to <code>Settings</code> -> <code>System</code> -> <code>Serial Information</code></li>
+        <li>Check to see if your switch is patched using <a href="https://ismyswitchpatched.com"">IsMySwitchPatched</a></li>
+        <li>If your switch is patched, you will need to modchip your switch.</li>
+      </ol>
+      <h3>Instructions:</h3>
+      <ol>
+        <li>Put your Switch into RCM mode using the RCM jig and pressing Power and Volume Up Button (+)</li>
+        <li>Connect your Switch to your computer or Android device using the USB-C cable.</li>
+        <li>Run the exploit using <a href="https://github.com/eliboa/TegraRcmGUI/releases/latest">TegraRcmGUI</a> if you are on Windows or <a href="https://github.com/MenosGrante/Rekado/releases/latest">Rekado</a> if you are on Android</li>
+        <li>Navigate to <code>Tools</code> -> <code>Partition SD</code></li>
+        <li>Set the <code>emuMMC (RAW)</code> partition to <code>29 FULL</code></li>
+        <ul>
+          <li>If you want to install Android or Linux afterwards, you can set the sliders for <code>Android (USER)</code> or <code>Linux (EXT4)</code> to at least 16GB</li>
+        </ul>
+        <li>Navigate to <code>Next Step</code> and then press <code>Start</code> in the menu that appears.</li>
+        <ul>
+          <li>For Android select <code>Legacy</code> for Android 10/11 and <code>Dynamic</code> for the latest versions. Legacy and Dynamic are NOT intercompatible.</li>
+        </ul>
+        <li>From the <code>Home</code> menu, navigate to <code>emuMMC</code> -> <code>Create emuMMC</code> -> <code>SD Partition</code> -> <code>Part 1</code>.</li>
+        <li>Wait for it to complete.</li>
+        <li>Close the menu by pressing <code>Close</code> then go to <code>Change emuMMC</code> -> <code>SD RAW 1</code> and press the <code>Close</code> button twice to return to the home menu.</li>
+        <li>Once done, go to <code>Tools</code> -> <code>USB Tools</code> -> <code>SD Card</code> and plug your Switch into your PC using the USB-C cable you used before.</li>
+      </ol>
+      <h3>SD Card Preparation</h3>
+      <ol>
+        <li>Download the latest version of <a href="https://github.com/Team-Neptune/DeepSea">DeepSea</a>.</li>
+        <li>Extract the contents of the zip file to the root of your SD card.</li>
+        <li>Eject the switch and press <code>Close</code>.</li>
+      </ol>
+      <h3>Backups - Don't Skip</h3>
+      <ol>
+        <li>Go to <code>Tools</code> -> <code>Backup eMMC</code>.</li>
+        <li>Tap on <code>eMMC BOOT0 & BOOT1</code>.</li>
+        <ul>
+          <li>The process should only take a few seconds, but if your SD card is slow, it may take around a minute.</li>
+        </ul>
+        <li>Tap <code>Close</code> to continue, then tap on <code>eMMC RAW GPP</code>.</li>
+        <li>Go to the top right and press <code>Close</code> -> <code>Home</code>.</li>
+        <li>Navigate to <code>Tools</code> -> <code>USB tools</code> -> <code>SD card</code> and plug your Switch into your PC via USB.</li>
+        <li>Copy the <code>backup</code> folder on your microSD card to a safe location on your PC.</li>
+        <li>Once done, you may delete the <code>backup</code> folder from the root of your microSD card and eject the <code>UMS</code> device safely from within your computer's operating system, then return to the <code>Home</code> menu.</li>
+      </ol>
+      <h3>Booting into emuMMC</h3>
+      <ol>
+        <li>From the <code>Home</code> menu, navigate to the <code>Launch</code> menu.</li>
+        <li>Press on <code>Atmosphere FSS0 emuMMC</code> and launch it.</li>
+        <li>Once booted, check <code>Settings</code> -> <code>System</code> and see if it says <code>AMS</code> next to the version number.</li>
+      </ol>
+      <h3>Launching Homebrew Meu</h3>
+      <ol>
+        <li>You can access it by opening the albums or by holding the R button while opening a game or app. If R isnt held, the game or app will launch like normal.</li>
+      </ol>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 NSwitch Hacks Guide</p>
+  </footer>
+</body>
+</html>
